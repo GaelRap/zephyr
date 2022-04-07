@@ -2,7 +2,7 @@
  * STM32H745I-Disco board configuration
  */
 
-#include <st/h7/stm32h745zitx-pinctrl.dtsi>
+#include <st/h7/stm32h745xihx-pinctrl.dtsi>
 #include "arduino_r3_connector.dtsi"
 
 / {
