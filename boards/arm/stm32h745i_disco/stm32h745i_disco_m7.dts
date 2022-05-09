@@ -45,7 +45,7 @@
 };
 
 &clk_hse {
-	clock-frequency = <DT_FREQ_M(25)>; /* STLink 8MHz clock */
+	clock-frequency = <DT_FREQ_M(25)>; /* STLink 25MHz clock */
 	status = "okay";
 };
 
@@ -102,17 +102,23 @@
 
 &mac {
 	status = "okay";
-	pinctrl-0 = <&eth_ref_clk_pa1
+	pinctrl-0 = <&eth_rx_clk_pa1
 		     &eth_mdio_pa2
-		     &eth_crs_dv_pa7
+		     &eth_rx_dv_pa7
 		     &eth_mdc_pc1
 		     &eth_rxd0_pc4
 		     &eth_rxd1_pc5
-		     &eth_tx_en_pg11
+		     &eth_rxd2_pb0
+			 &eth_rxd3_pb1
+			 &eth_tx_clk_pc3
+			 &eth_tx_en_pg11
 		     &eth_txd0_pg13
-		     &eth_txd1_pb13>;
+		     &eth_txd1_pg12
+			 &eth_txd2_pc2
+			 &eth_txd3_pe2
+			 &eth_col_ph3
+			 &eth_crs_ph2>;
 	pinctrl-names="default";
-
 };
 
 &rng {
